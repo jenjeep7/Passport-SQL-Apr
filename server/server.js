@@ -48,10 +48,9 @@ passport.use('local', new localStrategy({
         console.log(row);
         user = row;
 
-        //Check password
         console.log(password, user.password, 'passwords');
         if(password === user.password){
-          console.log('match!');
+          console.log('A user has been found.');
           done(err, user);
         } else {
           console.log('no matches found');
